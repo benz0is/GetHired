@@ -1,0 +1,26 @@
+#arrow {
+  animation: MoveUpDown 1s linear infinite;
+  position: absolute;
+  margin: auto;
+}
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 15px;
+  }
+}
+
+#closeBtn:hover {
+  cursor: pointer;
+}
+
+#dropdownMenuButton:hover {
+  cursor: pointer;
+}
+
+#pointerClick:hover {
+  cursor: pointer;
+}
