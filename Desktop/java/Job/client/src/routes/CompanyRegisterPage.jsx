@@ -30,7 +30,6 @@ const CompanyRegisterPage = () => {
     if (address === undefined) {
       setAddress("no");
     }
-    console.log(name, email, password, address);
     const response = await fetch("http://localhost:3001/api", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
