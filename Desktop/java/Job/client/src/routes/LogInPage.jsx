@@ -39,7 +39,6 @@ const LogInPage = () => {
     };
     fetchData();
   }, []);
-  console.log(api);
   const handleSubmit = (e) => {
     if (email === undefined || password === undefined) {
       alert("Please dont leave any blank spaces!");
