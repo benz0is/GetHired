@@ -88,8 +88,6 @@ const AccountPage = () => {
   if (appliedJob !== undefined) {
     appliedJob.data.applied.map((res) => list.push(res.posting_id));
   }
-  console.log(list);
-  console.log(jobList, "jobList");
   const handleMsgOpen = () => {
     setShowMessages(true);
   };
