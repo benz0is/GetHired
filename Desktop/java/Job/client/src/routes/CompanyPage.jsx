@@ -228,7 +228,6 @@ const updateName = async()=>{
   };
   const sendMessages=async(e)=>{
     e.preventDefault()
-    console.log(dialog,id,userId,messageText)
     const response = await fetch("http://localhost:3001/api", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
