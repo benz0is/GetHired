@@ -15,7 +15,6 @@ const JobHunting = () => {
   const [refId, setRefId] = useState();
   const [trigger, setTrigger] = useState();
   let list = [];
-  console.log(api);
   const CID = sessionStorage.getItem("CompanyId");
   useEffect(() => {
     const fetchData = async () => {
@@ -60,7 +59,6 @@ const JobHunting = () => {
   if (applied !== undefined) {
     applied.data.applied.map((res) => list.push(res.posting_id));
   }
-  console.log(list);
   const handleSubmit = (e) => {
     e.preventDefault();
     let searchCity;
@@ -232,14 +230,14 @@ const JobHunting = () => {
             type="checkbox"
             className="mb-3 mr-2"
             style={{ position: "relative", top: "2px" }}
-            onChange={(e) => setRemote("yes") && console.log(remote)}
+            onChange={(e) => setRemote("yes")}
           />
           <label className="mr-1">No</label>
           <input
             type="checkbox"
             className="mb-3"
             style={{ position: "relative", top: "2px" }}
-            onChange={(e) => setRemote("no") && console.log(remote)}
+            onChange={(e) => setRemote("no")}
           />
         </form>
       </div>
@@ -299,7 +297,7 @@ const JobHunting = () => {
                       {list.includes(res.id) ? (
                         <div>
                           <button disabled className="btn btn-primary m-2">
-                            Applied{console.log(id)}
+                            Applied
                           </button>
                         </div>
                       ) : (
@@ -319,7 +317,7 @@ const JobHunting = () => {
                             applyToJob(e.target.value);
                           }}
                         >
-                          Apply{console.log(id)}
+                          Apply
                         </button>
                       ) : (
                         ""
@@ -379,7 +377,7 @@ const JobHunting = () => {
                       {list.includes(res.id) ? (
                         <div>
                           <button disabled className="btn btn-primary m-2">
-                            Applied{console.log(id)}
+                            Applied
                           </button>
                         </div>
                       ) : (
@@ -398,7 +396,7 @@ const JobHunting = () => {
                             applyToJob(e.target.value);
                           }}
                         >
-                          Apply{console.log(id)}
+                          Apply
                         </button>
                       ) : (
                         ""
